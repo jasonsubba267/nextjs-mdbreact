@@ -4,9 +4,10 @@
   "description": "Integration example for MDBReact and Next.js",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
+   "dev": "node server.js -p $PORT",
     "build": "next build",
-    "start": "node server.js"
+    "heroku-postbuild":"next build",
+    "start": "node server.js -p $PORT"
   },
   "author": "Jakub Mandra",
   "license": "ISC",
@@ -21,5 +22,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "keywords": []
+  "keywords": [],
+  "engines":{
+    "node":"10.15.x"
+  }
 }
